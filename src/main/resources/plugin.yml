@@ -1,0 +1,7 @@
+name: Slots
+version: '${project.version}'
+main: world.ntdi.slots.Slots
+api-version: 1.18
+authors: [ Ntdi ]
+description: A slots plugin for minecraft
+website: ntdi.world
