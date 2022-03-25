@@ -7,9 +7,13 @@ import world.ntdi.slots.Commands.GambleCMD;
 
 public final class Slots extends JavaPlugin {
 
+    public static Slots instance;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
+        instance = this;
+
         new CommandParser(this.getResource("commands.rdcml")).parse().register("slots", this,
                 new GambleCMD());
 
@@ -21,5 +25,9 @@ public final class Slots extends JavaPlugin {
         // Plugin shutdown logic
         Bukkit.getLogger().info("Slots is disabled!");
 
+    }
+
+    public static Slots getInstance() {
+        return instance;
     }
 }
