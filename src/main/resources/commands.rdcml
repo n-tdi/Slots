@@ -1,0 +1,6 @@
+slots,slot {
+    user player
+    play{
+        hook slots_play
+    }
+}
